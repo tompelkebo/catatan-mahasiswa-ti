@@ -450,4 +450,3 @@ Kita juga bisa membuat list bersarang, artinya mengisi item-item list dengan nil
 ```
 
 
-
