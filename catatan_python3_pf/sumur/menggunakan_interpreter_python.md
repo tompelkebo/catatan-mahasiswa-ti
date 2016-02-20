@@ -38,11 +38,21 @@ Halo Python Indonesia
 >>>
 ```
 
-## Encoding File Python
+## Pengkodean File Sumber Python
 
+Secara default, file sumber Python dikodekan dalam UTF-8. Dengan pengkodean ini, karakter dari sebagian besar bahasa di dunia dapat digunakan sebagai `string literal`, `identifier` dan `komentar`, meskipun pada nyatanya pustaka standar Python menggunakan karakter `ASCII` untuk `identifier`. Untuk menampilkan karakter-karakter UTF-8, editor yang kita gunakan harus diatur untuk UTF-8 dan ini juga harus menggunakan font-font yang mendukung semua karakter tersebut.
 
+Kita juga bisa menentukan format pengkodean yang berbeda dari sebuah file sumber Python. Untuk dapat melakukannya, tempatkan satu baris komentar diikuti nama pengkodean untuk file sumber, setelah komentar istimewa (`#!`) Perhatikan format berikut ini:
 
+```Python
+# -*- coding: encoding -*-
+```
 
+Misalnya, jika editor kita tidak mendukung pengkodean `UTF-8` dan kita ingin menggunakan beberapa jenis pengkodean lain (`Windows 1252`), kita dapat menulisnya seperti:
+ 
+```Python
+# -*- coding: cp-1252 -*-
+```
 
 
 
