@@ -73,6 +73,8 @@ Dengan Python, kita bisa melakukan operasi perpangkatan dengan menggunakan opera
 8
 ```
 
+**Perhatikan !** : Karena `**` memiliki hak lebih tinggi dari `-`, maka `-3 ** 2` akan ditafsirkan sebagai `-(3 ** 2)` dan dengan demikian hasilnya adalah `-9`. Untuk menghindari hal ini dan mendapatkan nilai `9`, kita dapat menggunakan `(-3) ** 2`.
+
 Tanda sama dengan (`=`) digunakan untuk menugaskan nilai ke dalam variabel. 
 
 ```Python
@@ -333,4 +335,119 @@ Python menyediakan fungsi `len()` di mana fungsi ini mengembalikan nilai integer
 >>> len("Indonesia")
 9
 ```
+
+###List
+
+Python mengenal sejumlah tipe data majemuk (bertumpuk) yang digunakan untuk mengelompokan nilai-nilai bersama dalam satu kesatuan. Tipe data ini ialah `list` yang berisi item-item yang dipisahkan dengan tanda koma dimana item-item tersebut dibungkus dengan tanda kurung persegi (`[]`). Sebuah list berisi item-item dari berbagai jenis data, tapi biasanya item-item tersebut memiliki tipe yang sama.
+
+```Python
+>>> rokaat_solat = [2, 4, 4, 3, 4]
+>>> rokaat_solat
+[2, 4, 4, 3, 4]
+```
+
+list juga bisa diindeks dan diiris layaknya string (karena semua tipe data `sequence` bisa melakukannya). Perhatikan contoh berikut ini:
+
+```Python
+>>> rokaat_solat[0] # solat subuh 
+2
+>>> rokaat_solat[-1] # solat isya
+4
+>>> rokaat_solat[-3:] # solat ashar sampai isya
+[4, 3, 4]
+```
+
+Semua operasi pada irisan akan mengembalikan sebuah list baru yang berisi item-item yang diminta. Ini berarti bahwa irisan berikut mengembalikan list yang baru dari list yang ada (copy).
+
+```Python
+>>> rokaat_solat[:]
+[2, 4, 4, 3, 4]
+```
+
+List juga mendukung operasi penggabungan (perekatan - `concatenate`) seperti string dengan operator `+`.
+
+```Python
+>>> angka_ganjil = [1, 3, 5, 7]
+>>> angka_ganjil + [9, 11, 13, 15, 17, 19, 21]
+[1, 3, 5, 7, 9, 11, 13, 15, 17, 19, 21]
+```
+
+List bersifat `muttable`, ia tidak seperti string yang sifatnya `immutable`. setiap item pada list yang diakses melalui indeks bisa diubah atau ditugaskan item dari nilai lain ke dalamnya.
+
+```Python
+>>> from pprint import pprint
+>>> tugas_kampus = [
+... 'Pencarian Paper Algoritma RSA',
+... 'Perhitungan Dasar RC4',
+... 'Konsep K-Mean Dasar'
+... ]
+>>> p(tugas_kampus)
+['Pencarian Paper Algoritma RSA',
+ 'Perhitungan Dasar RC4',
+ 'Konsep K-Mean Dasar']
+>>> tugas_kampus[1] = 'Perhitungan Dasar RC6 + SHA1' 
+>>> pprint(tugas_kampus)
+['Pencarian Paper Algoritma RSA',
+ 'Perhitungan Dasar RC6 + SHA1',
+ 'Konsep K-Mean Dasar']
+```
+
+Kita juga dapat menambahkan item baru pada akhir list, yaitu dengan menggunakan method `append(item)`. 
+
+```Python
+>>> # menambahkan tugas 
+... tugas_kampus.append("Penulisan Karya Ilmiah")
+>>> pprint(tugas_kampus)
+['Pencarian Paper Algoritma RSA', 
+ 'Perhitungan Dasar RC6 + SHA1', 
+ 'Konsep K-Mean Dasar', 
+ 'Penulisan Karya Ilmiah']
+
+```
+
+Kita juga bisa menugaskan nilai ke dalam bentuk irisan dalam sebuah list. tapi, ini berpotensi untuk mengubah ukuran list atau bahkan bisa menghapus semua item-item list.
+
+```Python
+>>> huruf = ['a', 'b', 'c', 'd', 'e', 'f', 'g']
+>>> huruf
+['a', 'b', 'c', 'd', 'e', 'f', 'g']
+>>> # menimpa beberapa item tertentu
+... huruf[2:5] = ['C', 'D', 'E']
+>>> huruf
+['a', 'b', 'C', 'D', 'E', 'f', 'g']
+>>> # menghapus beberapa item tertentu
+... huruf[2:5] = []
+>>> huruf
+['a', 'b', 'f', 'g']
+>>> # menghapus semua item
+... huruf[:] = []
+>>> huruf
+[]
+```
+
+Fungsi built-in `len()` juga berlaku untuk list.
+
+```Python
+>>> huruf = ['a', 'b', 'c', 'd']
+>>> len(huruf)
+4
+```
+
+Kita juga bisa membuat list bersarang, artinya mengisi item-item list dengan nilai list lain. Perhatikan contoh berikut ini:
+
+```Python
+>>> list_1 = [12.3, 4.67, 7.65]
+>>> list_2 = [4.5, 67.86, 44.21]
+>>> list_3 = [list_1, list_2]
+>>> list_3
+[[12.3, 4.67, 7.65], [4.5, 67.86, 44.21]]
+>>> list_3[0]
+[12.3, 4.67, 7.65]
+>>> list_3[1]
+[4.5, 67.86, 44.21]
+>>> list_3[0][2]
+7.65
+```
+
+
 
