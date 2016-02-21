@@ -76,7 +76,9 @@ Kita bisa mengubah fungsi untuk dapat mengembalikan nilai dengan kata kunci `ret
 8166.73
 ```
 
-Fungsi dapat melakukan hal tersebut karena adanya kata kunci `return`. Contoh di atas, hasil perkalian `p` dan `l` akan dikembalikan nilainya ke pemanggil fungsi tersebut. Dalam kata lain, nilai kembali dari sebuah fungsi akan ditampung di dalam variabel `luas` berupa nilai hasil perkalian dari `panjang` dan `lebar` yang dilakukan di dalam sebuah fungsi `luasPersegiPanjang`. Nilai yang ada di dalam variabel `luas` dibulatkan ke angka 2 digit setelah titik desimal.
+Fungsi dapat mengembalikan nilai karena adanya kata kunci `return`. Contoh di atas, hasil perkalian `p` dan `l` akan dikembalikan nilainya ke pemanggil fungsi tersebut. Dalam kata lain, nilai kembali dari sebuah fungsi akan ditampung di dalam variabel `luas` berupa nilai hasil perkalian dari `panjang` dan `lebar` yang dilakukan di dalam sebuah fungsi `luasPersegiPanjang`. Nilai yang ada di dalam variabel `luas` dibulatkan ke angka 2 digit setelah titik desimal.
+
+
 
 
 
