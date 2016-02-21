@@ -9,5 +9,6 @@ Catatan berkas kuliah formal dan non-formal si Tom. Semoga bermanfaat untuk kita
 1. [Menggunakan Interpreter Python](catatan_python3_pf/sumur/menggunakan_interpreter_python.md)
 2. [Pengantar Python](catatan_python3_pf/sumur/pengantar_python.md)
 3. [Control Flow Python](catatan_python3_pf/sumur/control_flow_python.md)
+4. [Fungsi Di Python](catatan_python3_pf/sumur/fungsi_di_python.md)
 
 **TODO ...**
