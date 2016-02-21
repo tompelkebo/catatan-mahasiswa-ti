@@ -180,3 +180,31 @@ Angka ditemukan: 13
 Angka genap ditemukan: 14
 ```
 
+## Pernyataan Pass
+
+Pernyataan `pass` tidak melakukan apapun. Pernyataan ini dapat digunakan ketika sebuah pernyataan secara sintaksis wajib ada namun program tidak mengharuskan melakukan aksi atau sesuatu.
+
+```Python
+>>> while True:
+...     pass    # ditangguhkan, hingga melakuakn interupsi
+... 
+```
+
+Pernyataan `pass` biasa digunakan untuk membuat class sederhana.
+
+```Python
+>>> class Mahasiswa:
+...     pass
+... 
+```
+
+Di tempat lain, pernyataan `pass` bisa digunakan sebagai `place-holder` untuk sebuah fungsi. Bagaimanapun pernyataan `pass` secara diam-diam diabaikan.
+
+```Python
+>>> def kalkulasiTask(*args):
+...     pass
+... 
+```
+
+
+
