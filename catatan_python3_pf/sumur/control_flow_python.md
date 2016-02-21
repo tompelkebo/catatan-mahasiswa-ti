@@ -130,3 +130,53 @@ Tapi di sini kita bisa menyebut objek tersebut sebagai objek `iterable` atau obj
 >>> list(range(8))
 [0, 1, 2, 3, 4, 5, 6, 7]
 ```
+
+## Pernyataan Break, Continue dan Klausa Else Dalam Perulangan
+
+Pernyataan `break` digunakan untuk keluar dari perulangan pada  iterasi `for` atau `while`. Pernyataan perulangan memiliki pernyataan klausa `else` dimana blok ini akan dieksekusi ketika perulangan terhenti baik terhenti karena kondisi perulangan menjadi `false` (`while`) ataupun karena item-item list telah habis di iterasi (`for`), tetapi blok ini tidak akan dieksekusi ketika sebuah perulangan terhenti karena pernyataan `break`. Berikut ini adalah contoh yang memberikan kita bagaimana klausa `else` bekerja yang dimiliki oleh pernyataan perulangan seperti berikut:
+
+```Python
+>>> for n in range(2,10):
+...     for x in range(2, n):
+...         if n % x == 0:
+...             print(n, 'sama dengan', x, '*', n//x)
+...             break
+...     else:
+...         print(n, 'adalah angka prima')
+... 
+2 adalah angka prima
+3 adalah angka prima
+4 sama dengan 2 * 2
+5 adalah angka prima
+6 sama dengan 2 * 3
+7 adalah angka prima
+8 sama dengan 2 * 4
+9 sama dengan 3 * 3
+```
+
+Ketika klausa `else` digunakan untuk perulangan, klausa `else` tersebut memiliki lebih banyak kesamaan ketika klausa ini digunakan dalam blok `try` dibandingkan dengan blok `if`. Blok `else` (klausa `else`) pada blok `try` akan dieksekusi ketika sebuah `exception` terjadi dan Blok `else` (klausa `else`) pada perulangan `for` atau `while` akan dieksekusi ketika pernyataan `break` tidak dieksekusi atau dengan kata lain ketika `break` tidak terjadi.
+
+Pernyataan `continue` juga meminjam dari C. Pernyataan `continue` digunakan untuk melanjutkan iterasi berikutnya dan tidak lagi mengeksekusi pernyataan di bawahnya dari sebuah perulangan.
+
+```Python
+>>> for angka in range(2,15):
+...     if angka % 2 == 0:
+...         print("Angka genap ditemukan:", angka)
+...         continue
+...     print("Angka ditemukan:", angka)
+... 
+Angka genap ditemukan: 2
+Angka ditemukan: 3
+Angka genap ditemukan: 4
+Angka ditemukan: 5
+Angka genap ditemukan: 6
+Angka ditemukan: 7
+Angka genap ditemukan: 8
+Angka ditemukan: 9
+Angka genap ditemukan: 10
+Angka ditemukan: 11
+Angka genap ditemukan: 12
+Angka ditemukan: 13
+Angka genap ditemukan: 14
+```
+
