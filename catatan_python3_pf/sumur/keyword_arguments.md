@@ -20,12 +20,12 @@ Parameter Non Formal : Kumpulan Argumen Opsional
 ```
 Maka dengan kata lain kita dapati konsep sebagai berikut :
 
-```
-[1] - Setiap parameter formal merupakan sekumpulan argumen formal dan setiap argumen formal dapat berlaku  sebagai argumen kata kunci dan argumen posisi sesuai variasinya.
+1. Setiap `parameter formal` merupakan satu atau lebih `argumen formal` dan setiap `argumen formal` dapat berlaku  sebagai `argumen kata kunci` dan `argumen posisi` sesuai variasinya.
 
-[2] - Setiap parameter non formal merupakan sekumpulan argumen non-formal dan setiap argumen non-formal dapat berlaku  sebagai argumen kata kunci dan argumen posisi sesuai variasinya.
+2. Setiap `parameter non formal` merupakan satu atau lebih `argumen opsional` dan setiap `argumen opsional` dapat berlaku  sebagai `argumen kata kunci` dan `argumen posisi` sesuai variasinya.
 
-```
+3. Setiap `parameter non formal` harus menjadi parameter kedua setelah `parameter formal`.
+
 
 Perhatikan contoh berikut ini:
 
@@ -39,26 +39,39 @@ def parrot(voltage,
     print("-- It's", state, "!")
 ```
 
-Fungsi di atas menerima satu argumen yang formal (`voltage`) dan memiliki tiga argumen opsional (`state`, `action` dan `type`). Fungsi ini bisa dipanggil dengan berbagai cara seperti pada contoh berikut:
+Fungsi di atas menerima satu argumen yang formal (`voltage`) dan memiliki tiga argumen opsional (`state`, `action` dan `type`). Kembali ke konsep, kita analisis dari fungsi di atas:
+
+1. `parameter formal` : argumen berupa `voltage` yang harus ada ketika pemanggilan sebuah fungsi `parrot`.
+2. `parameter non formal`: argumen berupa `state`, `action` dan `type`.
+
+Fungsi ini bisa dipanggil dengan berbagai cara seperti pada contoh berikut:
 
 ```Python
-# 1 argumen posisi (argumen formal)
+# 1 argumen formal (voltage) dengan enggunakan argumen posisi
 parrot(1000)
 
-# 1 argumen dengan kata kunci (argumen opsional)                                 
+# 1 argumen formal (voltage) dengan enggunakan argumen kata kunci             
+# sehingga ada 1 argumen kata kunci                     
 parrot(voltage=1000) 
 
-# 2 argumen dengan kata kunci 
-# (argumen formal, argumen opsional)
+# 1 argumen formal dengan menggunakan argumen kata kunci
+# 1 argumen opsional dengan menggunakan argumen kata kunci
+# sehingga ada 2 argumen kata kunci  
 parrot(voltage=1000000, action='VOOOOOM') 
   
-# 2 kata kunci argumen         
+# 1 argumen opsional dengan menggunakan argumen kata kunci
+# 1 argumen formal dengan menggunakan argumen kata kunci
+# sehingga ada 2 argumen kata kunci        
 parrot(action='VOOOOOM', voltage=1000000)     
  
-# 3 argumen posisi     
+# 1 argumen formal dengan menggunakan argumen posisi
+# 2 argumen opsional dengan menggunakan 2 argumen posisi  
+# sehingga ada 3 argumen posisi
 parrot('a million', 'bereft of life', 'jump')    
    
-# 1 posisi, 1 kunci 
+# 1 argumen formal dengan menggunakan argumen posisi
+# 1 argumen opsional dengan menggunakan argumen kata kunci
+# sehingga ada 1 argumen posisi dan 1 argumen kata kunci
 parrot('a thousand', state='pushing up the daisies')  
 ```
 
