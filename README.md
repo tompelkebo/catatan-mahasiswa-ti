@@ -10,5 +10,7 @@ Catatan berkas kuliah formal dan non-formal si Tom. Semoga bermanfaat untuk kita
 2. [Pengantar Python](catatan_python3_pf/sumur/pengantar_python.md)
 3. [Control Flow Python](catatan_python3_pf/sumur/control_flow_python.md)
 4. [Fungsi Di Python](catatan_python3_pf/sumur/fungsi_di_python.md)
-4. [Nilai Default Di Argumen Fungsi](catatan_python3_pf/sumur/nilai_default_di_argumen_fungsi.md)
+5. [Nilai Default Di Argumen Fungsi](catatan_python3_pf/sumur/nilai_default_di_argumen_fungsi.md)
+6. [Keyword Arguments](catatan_python3_pf/sumur/keyword_arguments.md)
+
 **TODO ...**
