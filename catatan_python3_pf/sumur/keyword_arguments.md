@@ -12,6 +12,21 @@ Di dalam pemanggilan fungsi, kita juga bisa melewatkan argument dengan menggunak
     + argumen posisi 
 ```
 
+Konsep lain seperti:
+
+```
+Parameter Formal     : Kumpulan Argumen Formal
+Parameter Non Formal : Kumpulan Argumen Opsional
+```
+Maka dengan kata lain kita dapati konsep sebagai berikut :
+
+```
+[1] - Setiap parameter formal merupakan sekumpulan argumen formal dan setiap argumen formal dapat berlaku  sebagai argumen kata kunci dan argumen posisi sesuai variasinya.
+
+[2] - Setiap parameter non formal merupakan sekumpulan argumen non-formal dan setiap argumen non-formal dapat berlaku  sebagai argumen kata kunci dan argumen posisi sesuai variasinya.
+
+```
+
 Perhatikan contoh berikut ini:
 
 ```Python
