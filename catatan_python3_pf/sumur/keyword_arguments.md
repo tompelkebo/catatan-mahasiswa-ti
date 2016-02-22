@@ -113,3 +113,5 @@ client : John Cleese
 shopkeeper : Michael Palin
 sketch : Cheese Shop Sketch
 ```
+
+Perhatikan pada daftar nama `argumen kata kunci` dibuat dengan menyortir hasil kuncinya dengan method `sorted()` sehingga hasilnya lebih terurut.
